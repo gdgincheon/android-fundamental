@@ -2,30 +2,27 @@
 
 # 1. Install Android Studio
 
----
-
 [](https://developer.android.com/studio/)
 
 ![images/download.png](images/download.png)
 
-## Install Task
 
----
+## Install Task
 
 1. Android Studio Download 페이지에 들어가서 Android Studio를 다운로드 합니다. 
 2. 설치 마법사창에서 Default Configuration (기본 설정) 을 하면 간단하게 설치할 수 있습니다. 
 3. 모두 설치한 뒤에는 Android SDK 등을 부수적으로 설치해야 합니다. 
 4. 끄읕.
 
-# 2. Get Started !
 
----
+
+# 2. Get Started !
 
 Hello world! 가 표시되는 기본 앱을 만들어봅니다. 
 
+
 ## Task. Create the Helloworld project
 
----
 
 1. Start a new Android Studio Project
 
@@ -47,9 +44,9 @@ Hello world! 가 표시되는 기본 앱을 만들어봅니다.
 
 Finish  버튼을 누르면 끄읕!
 
-## Task. Explore Android Studio
 
----
+
+## Task. Explore Android Studio
 
 1. 처음 생성하게 되면 Android Studio에서 구동할 수 있는 기본적인 구조로 프로젝트가 생성되어 있습니다.  왼쪽 창에 구조를 살펴볼 수 있도록 Android로 설정해봅시다. 
 
@@ -101,6 +98,7 @@ Finish  버튼을 누르면 끄읕!
 
 - activity가 하나있고, intent-filter를 통해서 앱 실행시에 먼저 실행할 Activity가 MainActivity라고 지정해주고 있네요.
 
+
 ### 이제 Gradle Scripts 폴더도 살펴봅시다!
 
 ![images/gradle.png](images/gradle.png)
@@ -112,9 +110,9 @@ Gradle 은 앱과 의존성 라이브러리, 기타 설정들을 기술해서 �
 
 i
 
+
 ## Task. Run your app on a virtual device(emulator)
 
----
 
 이 단계에서는 Android Virtual device manager (AVD) 를 통해서 가상 디바이스를 생성하고, 앱을 실행시켜볼 것입니다. 
 
@@ -148,15 +146,19 @@ i
 
 ![images/Untitled%205.png](images/Untitled%205.png)
 
+
+
+
 # 결과!
 
----
 
 가상 디바이스에서 "Hello World!"가 표시되는 화면을 볼 수 있습니다.
 
 ![images/Untitled%206.png](images/Untitled%206.png)
 
 실제 디바이스에서도 USB를 연결하면, 간단하게 실행시킬 수 있습니다. 그러기 위해서는 다음과 같은 단계를 거쳐야 합니다.
+
+
 
 ## 실제 디바이스에서 실행하기
 
@@ -172,9 +174,11 @@ USB에 연결하면 "USB 디버깅을 허용하시겠습니까?" 라는 문구�
 
 ![images/Untitled%208.png](images/Untitled%208.png)
 
+
+
+
 # Homework
 
----
 
 - Create a new Android project from the Empty Template.
 - Open the **`res/strings.xml`** file.
@@ -187,8 +191,8 @@ USB에 연결하면 "USB 디버깅을 허용하시겠습니까?" 라는 문구�
 </resources>
 ```
 
-## 결과
 
----
+
+## 결과
 
 ![images/Untitled%209.png](images/Untitled%209.png)
