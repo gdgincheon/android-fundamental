@@ -1,0 +1,1 @@
+# Use LinearLayout with the Layout Editor
