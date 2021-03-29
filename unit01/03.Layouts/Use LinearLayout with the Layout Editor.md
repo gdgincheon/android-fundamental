@@ -6,9 +6,11 @@
 
 - View는 ViewGroup에 배치되며, ViewGroup조차도 뷰로 다루기때문에 위와같은 계층구조로 이루어질 수 있다.
 - View의 종류는 다음과 같다.
+
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/ViewClassInheritanceDiagram.PNG)
 
 - View Group의 종류는 다음과 같다.(즉, ViewGroup은 모든 Layout과 레이아웃을 상속받고있는 뷰들을 말한다.)
+
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/ViewGroupClassInheritanceDiagram.PNG)
 
 ## 리니어 레이아웃(LinearLayout)
