@@ -2,7 +2,7 @@
 
 ## 뷰와 뷰그룹의 관계(Relationship between views and viewgroups)
 
-![Alt text](1.UseLinearLayoutwiththeLayoutEditor/Relationshipbetweenviewsandviewgroups.PNG)
+![Alt text](1.UseLinearLayoutwiththeLayoutEditor/Relationshipbetweenviewsandviewgroups.png)
 
 - View는 ViewGroup에 배치되며, ViewGroup조차도 뷰로 다루기때문에 위와같은 계층구조로 이루어질 수 있다.
 - View상속도는 다음과 같다.
@@ -29,11 +29,13 @@
 - 텍스트를 표시하는 기능을 담당하고 있다.
 - 텍스트뷰의 텍스트 크기는 sp를 권장하고있다.
 	- 가독성 때문인데, 시스템 글꼴크기를 "크게" "아주크게"등으로 설정할 때 dp의 경우는 변화가 없지만 sp의 경우는 커지기 때문이다.
+
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/dpWaring.PNG)
 
 - 속성으로는 다음과 같다.
 	- 패딩(Padding), 마진(margin), 정렬위치(gravity) 등등
 	- 패딩과 마진의 차이는 패딩은 View의 테두리로부터 컨텐츠 사이의 여백을 말하며, 마진은 부모 레이아웃으로부터 View의 테두리사이의 여백을 말한다.
+
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/PaddingAndMargin.PNG)
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/Padding.PNG)
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/Margin.PNG)
@@ -62,6 +64,7 @@
 
 - 화면 밖으로 구성된 뷰가있는 경우, 스크롤 가능하게 해주는 기능을 담당하고 있다.
 - 자식뷰 또는 뷰그룹이 하나만 존재할 수 있다.
+
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/multiChildViewScollView.PNG)
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/multiChildViewGroupScollView.PNG)
 
