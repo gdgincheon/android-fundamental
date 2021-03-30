@@ -74,4 +74,5 @@
 
 - 자식 뷰그룹을 하나로 두고 계층적으로 뷰그룹을 더그려갈 수도있다.
 - ScrollView -> ViewGroup -> ViewGroup ....
+
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/ScrollView.PNG)
