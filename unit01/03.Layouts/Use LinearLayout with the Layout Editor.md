@@ -9,9 +9,27 @@
 
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/ViewClassInheritanceDiagram.PNG)
 
-- View Group상속도는 다음과 같다.(즉, ViewGroup은 모든 Layout과 레이아웃을 상속받고있는 뷰들을 말한다.)
+- View Group상속도는 다음과 같다.
 
 ![Alt text](1.UseLinearLayoutwiththeLayoutEditor/ViewGroupClassInheritanceDiagram.PNG)
+
+## 레이아웃 에디터(Layout Editor)
+
+![Alt text](1.UseLinearLayoutwiththeLayoutEditor/LayoutEditor.png)
+
+1. Design editor : Design View, BluePrint View에서 시각적 표현을 표시.
+2. Toolbar
+	- 디자인 에디터의 View를 정할수 있음. (Design View / BluePrint View / Design View + BluePrint View)
+	- 가로, 세로 / UI모드 / Night 모드 설정 가능.
+	- 기기 설정가능(다양한 해상도 체험가능)
+	- API Version 설정가능
+	- 테마 변경가능
+	- 언어 설정가능
+3. Palette : 컴포넌트 트리 또는 Design View, BluePrint View에 넣을 View, ViewGroup 목록을 제공(드래그앤 드롭으로 배치가능)
+4. Component Tree : 레이아웃 계층을 뷰 트리로 구성.
+5. Attributes : 현재 선택되어진 View 또는 ViewGroup의 속성을 표시.
+
+- 해당 기능을 더 편하게 사용하기위해서 강력하고 유연한 ViewGroup이 필요한데, 그 결과로 나온 레이아웃이 ConstraintLayout이다.
 
 ## 리니어 레이아웃(LinearLayout)
 
