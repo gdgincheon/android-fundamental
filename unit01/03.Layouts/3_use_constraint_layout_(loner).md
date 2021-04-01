@@ -22,11 +22,13 @@
 뷰 인스펙터에는 제약, 제약 유형, 제약 바이어스 및 뷰 여백과 같은 레이아웃 속성에 대한 컨트롤이 포함되어 있습니다.
 
 1.바이어스 
-![Alt text](3_use_constraint_layout_(loner)_res/4.png) 이 슬라이드를 이용하여 제약 간 어느쪽으로 위치를 기울일 것인지 설정 가능합니다.
+![Alt text](3_use_constraint_layout_(loner)_res/4.png) 
+이 슬라이드를 이용하여 제약 간 어느쪽으로 위치를 기울일 것인지 설정 가능합니다.
 (기본적으로 50이 default)
 
 2. 제약간의 마진
-![Alt text](3_use_constraint_layout_(loner)_res/5.png) 뷰 제약 사이의 마진을 넣을 수 있습니다. 
+![Alt text](3_use_constraint_layout_(loner)_res/5.png) 
+뷰 제약 사이의 마진을 넣을 수 있습니다. 
 
 3. 제약간의 여백 조정 및 제약 조건 변경
  * 컨텐츠 줄 바꿈:![Alt text](3_use_constraint_layout_(loner)_res/6.png) 뷰가 컨텐츠를 포함하는데 필요한 만큼만 확장합니다.
@@ -35,21 +37,21 @@
  
 사용 예시: ![Alt text](3_use_constraint_layout_(loner)_res/9.png)
 
-[Alt text](3_use_constraint_layout_(loner)_res/10.png)
+![Alt text](3_use_constraint_layout_(loner)_res/10.png)
 
-[Alt text](3_use_constraint_layout_(loner)_res/11.png)
+![Alt text](3_use_constraint_layout_(loner)_res/11.png)
  
 4. 그외 사용 팁
-[Alt text](3_use_constraint_layout_(loner)_res/12.png)
+![Alt text](3_use_constraint_layout_(loner)_res/12.png)
 직접 마우스나 코드로 제약을 설정하지 않아도
  + 버튼 을 누르면 가까운 상위 뷰를 잡아서 자동으로 제약을 걸어줍니다.
 
 ## 체인
-[Alt text](3_use_constraint_layout_(loner)_res/13.png) 
+![Alt text](3_use_constraint_layout_(loner)_res/13.png) 
 체인은 뷰와 뷰사이의 양방향 제약이 걸린 상황 입니다.
 
 1. 체인의 머리 
-[Alt text](3_use_constraint_layout_(loner)_res/14.png)
+![Alt text](3_use_constraint_layout_(loner)_res/14.png)
 체인은 체인의 머리를 기준으로 모든 뷰를 제어 및 배치 및 배포 합니다.
 
 수직일 경우 가장 왼쪽이 HEAD 
@@ -59,24 +61,24 @@
 2. 체인의 스타일
 
 * 스프레드: 기본적인 스타일 입니다. 여백이 고려하여 사용 가능한 공간에 뷰가 균등하게 분산됩니다.
-[Alt text](3_use_constraint_layout_(loner)_res/15.png)
+![Alt text](3_use_constraint_layout_(loner)_res/15.png)
 
 * 스프레드 인사이드: 첫 번째 와 마지막 뷰가 체인의 각 끝에 있는 부모에 연결됩니다. 나머지 뷰는 균등하게 분산됩니다.
-[Alt text](3_use_constraint_layout_(loner)_res/16.png)
+![Alt text](3_use_constraint_layout_(loner)_res/16.png)
 
 * 패킹 됨: 뷰가 함께 묶입니다. 그런 다음 체인 헤드의 바이어스를 변경하여 전체 체인의 위치를​조정할 수 있습니다.
-[Alt text](3_use_constraint_layout_(loner)_res/17.png)
+![Alt text](3_use_constraint_layout_(loner)_res/17.png)
 
 * 가중치: layout_constraintHorizontal_weight 또는 layout_constraintVertical_weight 속성에 
 설정된 값에 따라 모든 공간을 채우도록보기의 크기가 조정됩니다.
-[Alt text](3_use_constraint_layout_(loner)_res/18.png)
+![Alt text](3_use_constraint_layout_(loner)_res/18.png)
 
 
 ## 베이스 라인
-[Alt text](3_use_constraint_layout_(loner)_res/19.png)
+![Alt text](3_use_constraint_layout_(loner)_res/19.png)
 베이스 라인 제약 조건은 뷰의 텍스트를 기준으로 다른 뷰의 텍스트와 정렬합니다.
 
-[Alt text](3_use_constraint_layout_(loner)_res/20.png)
+![Alt text](3_use_constraint_layout_(loner)_res/20.png)
 
 **현재 안스 4.1.2 기준으로 XML 의 디자인 화면에서 기준으로 잡는 뷰를 오른쪽 클릭 후 SHOW 버튼을 눌러야 초록색 버튼이 활성화가 됬습니다.
 .BY LONER**
