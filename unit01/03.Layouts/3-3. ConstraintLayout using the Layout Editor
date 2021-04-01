@@ -1,0 +1,20 @@
+# 3-3 ConstraintLayout using the Layout Editor
+
+
+### About Constraint Layout
+ - ViewGroup의 유연한 방식으로 LinearLayout 의 장점과 Relative Layout의 장점들을 결합한 현존 가장 최신의 레이아웃 이다.
+ - 코드로 작성도 가능하지만 대부분 적인 기초 구성은 Layout Editor (Design 탭) 을 사용하여 제약 조건을 추가하고 뷰를 끌어다 놓을 수도 있기 때문에 별도 편집이 필요 없다.
+ - 뷰를 배치할 때 적어도 수직 방향의 제약 1개, 수평 방향의 제약을 1개 지정 해야만 정상적인 뷰 배치가 완료 된다.
+
+### How to set Constraint ?
+ - wrap_content     : 뷰의 콘텐츠를 포함하는데 필요한 만큼만 확장
+ - dp고정 값 설정    : 뷰의 자체 여백을 고려 한 후 측면의 제약 조건을 충족하도록 뷰가 최대한 확장 됩니다.
+ - match_constraint : 뷰의 각 측면에 제약 조건을 충족하도록 뷰가 최대한 확장 됩니다.
+ 
+### About Chain
+ - chain            : 양방향 제약 서로 연결된 뷰의 그룹이다.
+ - chainStyle       : 체인이 걸려있는 뷰들에 대한 펼쳐지고 정렬되는 방식을 정의 한다.
+   * spread           : 기본 스타일이며 균등하게 분산
+   * spread_inside    : 첫 번째 및 마지막 뷰가 각 끝에 연결 됨.
+   * packed           : 여백이 고려 된 후 뷰가 함께 패킹 됨. 바이어스로 디테일하게 조정 가능
+   
