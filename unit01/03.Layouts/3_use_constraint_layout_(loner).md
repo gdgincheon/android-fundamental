@@ -19,15 +19,18 @@
 
 ## 뷰 인스펙터 응용 하는 법 
 ![Alt text](3_use_constraint_layout_(loner)_res/3.png)
+
 뷰 인스펙터에는 제약, 제약 유형, 제약 바이어스 및 뷰 여백과 같은 레이아웃 속성에 대한 컨트롤이 포함되어 있습니다.
 
 1.바이어스 
 ![Alt text](3_use_constraint_layout_(loner)_res/4.png) 
+
 이 슬라이드를 이용하여 제약 간 어느쪽으로 위치를 기울일 것인지 설정 가능합니다.
 (기본적으로 50이 default)
 
 2. 제약간의 마진
 ![Alt text](3_use_constraint_layout_(loner)_res/5.png) 
+
 뷰 제약 사이의 마진을 넣을 수 있습니다. 
 
 3. 제약간의 여백 조정 및 제약 조건 변경
@@ -35,7 +38,9 @@
  * 고정: ![Alt text](3_use_constraint_layout_(loner)_res/7.png) 고정 제약 화살표 옆에있는 텍스트 상자에서 치수를 뷰 여백으로 지정할 수 있습니다.
  * Match Constraints: ![Alt text](3_use_constraint_layout_(loner)_res/8.png) 뷰의 자체 여백을 고려한 후 각 측면의 제약 조건을 충족하도록 뷰가 최대한 확장됩니다.
  
-사용 예시: ![Alt text](3_use_constraint_layout_(loner)_res/9.png)
+사용 예시: 
+
+![Alt text](3_use_constraint_layout_(loner)_res/9.png)
 
 ![Alt text](3_use_constraint_layout_(loner)_res/10.png)
 
@@ -43,15 +48,18 @@
  
 4. 그외 사용 팁
 ![Alt text](3_use_constraint_layout_(loner)_res/12.png)
+
 직접 마우스나 코드로 제약을 설정하지 않아도
  + 버튼 을 누르면 가까운 상위 뷰를 잡아서 자동으로 제약을 걸어줍니다.
 
 ## 체인
 ![Alt text](3_use_constraint_layout_(loner)_res/13.png) 
+
 체인은 뷰와 뷰사이의 양방향 제약이 걸린 상황 입니다.
 
 1. 체인의 머리 
 ![Alt text](3_use_constraint_layout_(loner)_res/14.png)
+
 체인은 체인의 머리를 기준으로 모든 뷰를 제어 및 배치 및 배포 합니다.
 
 수직일 경우 가장 왼쪽이 HEAD 
@@ -71,11 +79,13 @@
 
 * 가중치: layout_constraintHorizontal_weight 또는 layout_constraintVertical_weight 속성에 
 설정된 값에 따라 모든 공간을 채우도록보기의 크기가 조정됩니다.
+
 ![Alt text](3_use_constraint_layout_(loner)_res/18.png)
 
 
 ## 베이스 라인
 ![Alt text](3_use_constraint_layout_(loner)_res/19.png)
+
 베이스 라인 제약 조건은 뷰의 텍스트를 기준으로 다른 뷰의 텍스트와 정렬합니다.
 
 ![Alt text](3_use_constraint_layout_(loner)_res/20.png)
