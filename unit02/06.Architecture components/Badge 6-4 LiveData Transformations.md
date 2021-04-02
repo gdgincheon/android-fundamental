@@ -194,9 +194,10 @@ val userIdLiveData: MutableLiveData<Int> = MutableLiveData<Int>().apply { value 
 - **`Activity`**
 - **`MainActivity`**
 
-- 정답
-
+(정답)
     쓸려면 다 쓸수 있고, 아키텍쳐를 지키자면 ViewModel에서 사용!
+
+
 
 2. The Transformations.map() method provides an easy way to perform data manipulations on the LiveData and returns __________ .  map은 수행결과로 어떤 것을 반환할까?
 
@@ -205,9 +206,10 @@ val userIdLiveData: MutableLiveData<Int> = MutableLiveData<Int>().apply { value 
 - A formatted **`String`**
 - A **`RoomDatabase`** object
 
-- 정답
-
+(정답)
     A **`LiveData`** object
+    
+    
 
 3. What are the parameters for the Transformations.map() method? map의 매개변수는 뭐야?
 
@@ -216,9 +218,10 @@ val userIdLiveData: MutableLiveData<Int> = MutableLiveData<Int>().apply { value 
 - No parameters
 - **`ViewModel`** and a function to be applied
 
-- 정답
-
+(정답)
     A source **`LiveData`** and a function to be applied to the **`LiveData`**
+    
+    
 
 4. The lambda function passed into the Transformations.map() method is executed in which thread?
 
@@ -227,6 +230,5 @@ val userIdLiveData: MutableLiveData<Int> = MutableLiveData<Int>().apply { value 
 - UI thread
 - In a coroutine
 
-- 정답
-
+(정답)
     Main thread = UI thread
