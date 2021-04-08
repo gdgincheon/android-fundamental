@@ -1,0 +1,65 @@
+  
+# 6-2 Coroutines and Room
+
+
+### About Coroutine ?
+ - 코루틴은 콜백 대신 장기 실행 작업을 효율적으로 처리 해주며, 콜백 기반 코드를 순차 코드로 변환할 수 있다.
+ - 코루틴과 콜백 자체는 동일한 기능을 수행 하고 앱 내 에서 잠재적으로 오래 실행되는 비동기적 작업을 처리하는 방법이다.
+ 
+### 코루틴의 특징
+ - 비 동기적 (asynchronous)
+  * Main에서 하는일과 별도의 독립적으로 실행 됨
+ 
+ - 비 차단적 (non-blocking)
+  * Main or UI Thread를 진행을 차단하거나 방해하지 않음
+  
+ - 일시 중단 (suspend)
+  * suspend라는 함수를 사용하여 다른 작업이 발생 하는 동안 코루틴 자체는 일시 중단했다가 해제하여 비동기 코드를 순차적으로 만들어 줄 수 있다.
+  
+### 코루틴의 기능
+ - Job
+  * 모든 코루틴에는 Job이 있으며, 이를 사용하여, 코루틴을 취소 할 수 있다. 상위-하위 계층으로 정렬될 수 있고, 
+    상위 작업을 취소하면 해당 작업의 하위 작업들이 즉시 취소가 되므로 코루틴 Job을 관리하기 용이하다.
+    
+ - Dispatcher
+   * Dispatchers.Main은 기본 스레드에서 작업을 실행하고, Dispatcher.IO는 입출력 작업을 차단하는 것을 공유 스레드 풀로 오프로드 한다.
+ 
+ - Scope
+  * 스코프는 코루틴이 실행되는 Context를 정의 하고, Job 및 Dispathcer에 대한 정보를 결합하여 코루틴을 추적하는 역할을 함.
+  * 코루틴을 시작하면 스코프에 포함된 것이며, 추적할 범위를 지정했음을 의미한다.
+  
+### About Room Database ?
+ - SQLite의 확장팩 느낌의 내부 데이터베이스를 좀더 쉽고 간편하게 구현할 수 있게 출시된 라이브러리 이다.
+ 
+ 
+###Answer these questions
+
+Question 1
+Which of the following is not a benefit of using coroutines?:
+
+   They are non-blocking
+   They run asynchronously.
+   They can be run on a thread other than the main thread.
+O  They always make app runs faster.
+   They can use exceptions.
+   They can be written and read as linear code.
+
+Question 2
+Which of the following is not true for suspend functions.?
+
+   An ordinary function annotated with the suspend keyword.
+   A function that can be called inside coroutines.
+ O While a suspend function is running, the calling thread is suspended.
+   Suspend functions must always run in the background.
+
+Question 3
+Which of the following statements is NOT true?
+
+   When execution is blocked, no other work can be executed on the blocked thread.
+   When execution is suspended, the thread can do other work while waiting for the offloaded work to complete.
+   Suspending is more efficient, because threads may not be waiting, doing nothing.
+ O Whether blocked or suspended, execution is still waiting for the result of the coroutine before continuing.
+  
+  
+  
+ 
