@@ -1,0 +1,40 @@
+#### 7-6 GridLayout with RecyclerView
+
+
+## About GridLayout 
+ - 주로 사용자에게 한번에 많은 데이터를 표시할 때 사용하는 레이아웃이며, 행과 열의 격자 항목들을 배치하기에 좋은 레이아웃
+
+
+## GridLayout이 항목을 배치하는 방법
+ - Android 에서 기본적으로 Layout Manager로 제공하는 것을 이용가능 (그 외 LinearLayoutManager, StaggeredGridLayoutManager 가 있음)
+ - 기본적으로 행과 열의 격자로 항목을 정렬
+ - Horizontal Or Vertical 을 설정할 수 있는데 만약에 Verical (수직) 으로 설정 했다고 가정하면 행의 각 항목이 Span을 차지하게 됨.
+ - 한 행에 표시 되는 Count는 SpanCount를 이용하여 조절이 가능하고 SpanCount가 초과되면 다음 줄로 줄바꿈
+ - 디자인 적인 관점에서는 GridLayout의 아이콘이나 이미지로 표시 할 수 있는 항목 목록에 가장 적합
+ 
+## How to implement  With RecyclerView
+  1. 리사이클러뷰에 그리드 레이아웃 관리자를 사용
+  2. 복잡한 사용 사례의 경우에는 Custom Layout Manager를 만들어서 구현
+  
+  
+  질문 1
+다음 중 Android에서 제공하는 레이아웃 관리자는 무엇입니까? 해당되는 모든 것들을 고르세요.
+
+v LinearLayoutManager
+
+v GridLayoutManager
+
+▢ CircularLayoutManager
+
+v StaggeredGridLayoutManager
+
+질문 2
+"Span"이란 무엇입니까?
+
+v GridLayoutManager 에서 만든 그리드의 크기 
+
+▢ 그리드의 열 너비.
+
+▢ 그리드에서 항목의 크기.
+
+▢ 수직 방향을 가진 그리드의 열 수.
