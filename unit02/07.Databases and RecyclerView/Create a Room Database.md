@@ -25,17 +25,17 @@
 ```kotlin
 @Entity(tableName = "daily_sleep_quality_table")
 data class SleepNight(
-  @PrimaryKey(autoGenerate = true)
-	var nightId: Long = 0L,
-  
-	@ColumnInfo(name = "start_time_milli")
-	val startTimeMilli: Long = System.currentTimeMillis(),
+    @PrimaryKey(autoGenerate = true)
+    var nightId: Long = 0L,
+ 
+    @ColumnInfo(name = "start_time_milli")
+    val startTimeMilli: Long = System.currentTimeMillis(),
 
-  @ColumnInfo(name = "end_time_milli")
-	var endTimeMilli: Long = startTimeMilli,
+    @ColumnInfo(name = "end_time_milli")
+    var endTimeMilli: Long = startTimeMilli,
 
-	@ColumnInfo(name = "quality_rating")
-	var sleepQuality: Int = -1
+    @ColumnInfo(name = "quality_rating")
+    var sleepQuality: Int = -1
 )
 ```
 
@@ -48,24 +48,24 @@ data class SleepNight(
 ```kotlin
 @Dao
 interface SleepDatabaseDao {
-  @Insert
-	fun insert(night: SleepNight)
+    @Insert
+    fun insert(night: SleepNight)
   
-  @Update
-	fun update(night: SleepNight)
+    @Update
+    fun update(night: SleepNight)
   
-  @Query("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
-	fun get(key: Long): SleepNight?
+    @Query("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
+    fun get(key: Long): SleepNight?
   
-  // We can use @Delete as well as @Query, but it is only applicable when you want to delete specific entries.
-  @Query("DELETE FROM daily_sleep_quality_table")
-	fun clear()
+    // We can use @Delete as well as @Query, but it is only applicable when you want to delete specific entries.
+    @Query("DELETE FROM daily_sleep_quality_table")
+    fun clear()
 	
-  @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
-	fun getTonight(): SleepNight?
+    @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
+    fun getTonight(): SleepNight?
   
-  @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC")
-	fun getAllNights(): LiveData<List<SleepNight>>
+    @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC")
+    fun getAllNights(): LiveData<List<SleepNight>>
 }
 ```
 
@@ -82,34 +82,33 @@ interface SleepDatabaseDao {
 @Database(entities = [SleepNight::class], version = 1, exportSchema = false)
 abstract class SleepDatabase : RoomDatabase() {
     abstract val sleepDatabaseDao: SleepDatabaseDao
+    
     companion object {
-
-      // never be cached, and all R/W will be done from and to the main memory.
-      // You can make sure the value of INSTANCE is always up-to-date and the same to all execution threads.
-				@Volatile
+        // never be cached, and all R/W will be done from and to the main memory.
+        // You can make sure the value of INSTANCE is always up-to-date and the same to all execution threads.
+        @Volatile
       	private var INSTANCE: SleepDatabase? = null // singleton
 
       	fun getInstance(context: Context): SleepDatabase {
-          // Thread synchronization, means only one thread of execution at a time can enter this block of code. 
-          synchronized(this) {
-            	var instance = INSTANCE
+            // Thread synchronization, means only one thread of execution at a time can enter this block of code. 
+            synchronized(this) {
+	        var instance = INSTANCE
             	if (instance == null) {
-              	instance = Room.databaseBuilder(
-                	context.applicationContext,
-	                SleepDatabase::class.java,
-                	"sleep_history_database"
-              	)
-                .fallbackToDestructiveMigration()
-                .build()
-              	INSTANCE = instance
+    		    instance = Room.databaseBuilder(
+				  context.applicationContext,
+				  SleepDatabase::class.java,
+				  "sleep_history_database"
+				)
+                    .fallbackToDestructiveMigration()
+                    .build()
+              	    INSTANCE = instance
             	}
             	return instance
-          	}
+            }
       	}
     }
 }
 ```
-
 
 
 > *Annotate `INSTANCE` with `@Volatile`. The value of a volatile variable will never be cached, and all writes and reads will be done to and from the main memory. This helps make sure the value of `INSTANCE` is always up-to-date and the same to all execution threads. It means that changes made by one thread to `INSTANCE` are visible to all other threads immediately, and you don't get a situation where, say, two threads each update the same entity in a cache, which would create a problem.*
@@ -119,8 +118,7 @@ abstract class SleepDatabase : RoomDatabase() {
 ```kotlin
 @RunWith(AndroidJUnit4::class)
 class SleepDatabaseTest {
-  
-		private lateinit var sleepDao: SleepDatabaseDao
+    private lateinit var sleepDao: SleepDatabaseDao
     private lateinit var db: SleepDatabase
 
     @Before
